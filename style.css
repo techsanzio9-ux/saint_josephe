@@ -1,0 +1,636 @@
+/* ========================= */
+/*   STYLE GLOBAL            */
+/* ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+}
+/* Dégradé Gemini appliqué au body */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6d9f5 0%, #a8e4ff 50%, #148cfc 100%);
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* ========================= */
+/*   NAVBAR ACCUEIL          */
+/* ========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4facfe;
+    padding: 15px 30px;
+    border-radius: 0 0 20px 20px;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background: white;
+    color: #4facfe;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    background: #00c6ff;
+    color: white;
+}
+/* Correction overflow présentation */
+.container {
+  max-width: 100%;        /* ne dépasse jamais la largeur de l’écran */
+  box-sizing: border-box; /* inclut le padding dans la largeur */
+  padding: 30px 20px;     /* réduit légèrement le padding latéral */
+  margin: 0 auto;         /* centre le contenu */
+}
+/* ========================= */
+/*   LAYOUT ACCUEIL          */
+/* ========================= */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/*   CARTE GOOGLE MAPS       */
+/* ========================= */
+
+.map {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+/* ========================= */
+/*   SLIDER                  */
+/* ========================= */
+
+.slider {
+    position: relative;   /* référence pour les boutons */
+    overflow: hidden;
+    border-radius: 20px;
+    max-width: 100%;
+    height: 400px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    flex: 0 0 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Boutons slider */
+/* Boutons slider au-dessus des photos */
+.prev,
+.next {
+  position: absolute;
+  top: 10px;               /* placé en haut du slider */
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;             /* au-dessus des images */
+}
+
+/* Bouton gauche */
+.prev {
+  left: 10%;               /* centré horizontalement */
+  transform: translateX(-120%); /* décalé légèrement à gauche */
+}
+
+/* Bouton droit */
+.next {
+  left: 90%;               /* centré horizontalement */
+  transform: translateX(20%);   /* décalé légèrement à droite */
+}
+
+
+/* ========================= */
+/*   SECTION INSCRIPTION     */
+/* ========================= */
+
+.inscription-nav {
+    margin-top: 40px;
+    background: #4facfe;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.inscription-nav h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.inscription-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.inscription-col {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Largeurs */
+.col-large {
+    flex: 1;
+    min-width: 300px;
+}
+
+.col-small {
+    width: 280px;
+    min-width: 250px;
+}
+
+/* Formulaires */
+.inscription-col h2 {
+    margin-top: 0;
+    color: #4facfe;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.photo-upload {
+    width: 2.8cm;
+    height: 3cm;
+    border: 2px dashed #4facfe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #eef7ff;
+    color: #4facfe;
+    font-weight: bold;
+    margin: 0 auto 15px auto; /* <-- CENTRAGE */
+    text-align: center;
+}
+
+.photo-upload img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.submit-btn {
+    background: #4facfe;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #00c6ff;
+}
+
+.page-a4 {
+    width: 21cm;
+    min-height: 29.7cm;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.header-a4 {
+    text-align: center;
+}
+
+.logo-a4 {
+    width: 80px;
+    height: 80px;
+}
+
+.a4-photo img {
+    width: 3cm;
+    height: 3.5cm;
+    object-fit: cover;
+    border: 2px solid #4facfe;
+}
+
+/* zone de recadrage en grand */
+.crop-zone {
+    width: 100%;
+    max-width: 700px;
+    margin: 18px auto;
+    position: relative;
+}
+
+/* image affichée en grand pour recadrage */
+.crop-zone img.crop-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* petit cadre final (aperçu) : s'assurer que le canvas occupe tout l'espace */
+.photo-upload {
+    width: 3cm; /* ou la taille que tu veux */
+    height: 3.5cm;
+    border: 2px dashed #4facfe;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #eef7ff;
+    margin: 0 auto 15px auto;
+    text-align: center;
+}
+
+/* canvas / img inséré dans le petit cadre */
+.photo-upload canvas,
+.photo-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* assombrir la zone hors du crop box (CropperJS) */
+.cropper-modal {
+    background-color: rgba(0,0,0,0.6) !important;
+}
+
+/* améliorer visibilité du crop box */
+.cropper-view-box,
+.cropper-face {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.15) inset;
+}
+
+/* filigrane */
+.page-a4 {
+  position: relative;
+  background: white;
+  padding: 24px;
+}
+.page-a4::before {
+  content: "ECOLE SAINT JOSEPH";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) rotate(-30deg);
+  font-size: 48px;
+  color: rgba(0,0,0,0.06);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* cadre décoratif autour de la fiche */
+.page-a4 .header-a4, .page-a4 > * { position: relative; z-index: 1; }
+.page-a4 { border: 6px double #4facfe; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+.field-error { border: 2px solid #e74c3c !important; background: #fff6f6; }
+
+/* Container galerie */
+.galerie {
+  margin-top: 40px;
+  padding: 20px;
+  background: transparent;   /* laisse apparaître le dégradé du body */
+}
+
+.galerie-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* espace entre colonnes */
+  padding: 0 40px; /* espace à gauche et à droite pour éviter que ça colle aux bords */
+}
+
+.colonne {
+  flex: 1;
+  padding: 20px;
+  background: #fff; /* optionnel pour contraste */
+  border-radius: 10px;
+}
+
+/* Titres en haut de chaque colonne */
+.colonne h3 {
+  color: #007BFF;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Images arrondies */
+.colonne img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Barre de recherche Palmarès */
+.search-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 35px 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+/* Slider Palmarès */
+.slider-palmares {
+  overflow: hidden;
+}
+
+.slider-palmares img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+/* Formulaire Nous écrire */
+.colonne-contact form {
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.8s ease;
+}
+
+.colonne-contact input,
+.colonne-contact textarea {
+  width: 100%; /* même largeur que la barre de recherche et les photos */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.colonne-contact button {
+  padding: 10px;
+  background: #4facfe;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Animation slider */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Formulaires inscription : uniformiser largeur */
+.inscription-col input,
+.inscription-col select,
+.inscription-col textarea {
+  width: 100%;              /* même largeur partout */
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #0c9eff;
+  box-sizing: border-box;   /* inclut le padding dans la largeur */
+}
+
+/* ========================= */
+/*   RESPONSIVE ACCUEIL + INSCRIPTION */
+/* ========================= */
+
+@media (max-width: 992px) {
+  /* Container accueil */
+  .container {
+    flex-direction: column;
+    padding: 0 20px;          /* marges gauche/droite */
+    box-sizing: border-box;
+    max-width: 1000px;        /* limite la largeur */
+    margin: 0 auto;           /* centre le contenu */
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Inscription */
+  .inscription-container {
+    flex-direction: column;
+    padding: 0 20px;          /* marges latérales */
+    box-sizing: border-box;
+    max-width: 1000px;        /* limite la largeur */
+    margin: 0 auto;           /* centre le contenu */
+  }
+
+  .inscription-col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustements supplémentaires sur mobile */
+  .container {
+    padding: 0 15px;
+    max-width: 100%;          /* occupe toute la largeur mais garde le padding */
+  }
+
+  .inscription-container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .col, .inscription-col {
+    margin-bottom: 15px;
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background: none !important; /* pas de dégradé en impression */
+  }
+
+  .footer, .social-icons {
+    display: none; /* cacher les éléments inutiles dans le PDF */
+  }
+
+  button {
+    display: none; /* les boutons ne doivent pas apparaître sur le PDF */
+  }
+
+  .formulaire {
+    width: 100%;
+    max-width: 21cm; /* largeur A4 */
+    margin: 0 auto;
+    font-size: 12pt; /* taille adaptée au PDF */
+  }
+}
+
+.formulaire {
+  max-width: 100%;
+}
+
+@media print {
+  .formulaire {
+    max-width: 21cm;
+  }
+}
+
+/* ========================= */
+/*   PIED DE PAGE            */
+/* ========================= */
+.footer {
+  background: transparent;   /* laisse apparaître le dégradé du body */
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.social-icons {
+  margin-bottom: 30px;
+}
+
+.social-icons a {
+  color: #fff;               /* icônes blanches */
+  margin: 0 20px;            /* espace horizontal ≈ 1 cm */
+  font-size: 15px;           /* taille des icônes */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #41c3ff;            /* nuance bleue au survol */
+  transform: scale(1.2);
+}
+
+/* Supprimer la ligne blanche */
+.footer-line {
+  display: none;             /* cache complètement la ligne */
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-tech {
+  font-size: 12px;
+  margin: 5px 0;
+  font-style: italic;
+}
+/* ========================= */
+/*   RESPONSIVE GALERIE      */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .galerie-container {
+    flex-direction: column;   /* les colonnes passent en pile verticale */
+    padding: 0 20px;          /* marges gauche/droite pour éviter qu’elles collent aux bords */
+    box-sizing: border-box;
+  }
+
+  .colonne {
+    width: 100%;              /* chaque colonne prend toute la largeur */
+    margin-bottom: 20px;      /* espace entre les colonnes */
+  }
+}
+
+@media (max-width: 768px) {
+  .galerie-container {
+    padding: 0 15px;          /* marges réduites mais présentes sur mobile */
+  }
+
+  .colonne {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;   /* marges latérales réduites mais présentes */
+  }
+}
